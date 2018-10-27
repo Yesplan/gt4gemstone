@@ -83,7 +83,27 @@ baseline: spec
 				with: #('GT-Debugger' 'GT-Inspector' 'Glamour-FastTable' 'Glamour-Core' 'Glamour-Morphic-Renderer').
 	].
 	
-	 spec for: #'gemstone' do: [
+  spec
+    for: #'gs2.4.x'
+    do: [ 
+      spec
+        baseline: 'Tode'
+        with: [ 
+          spec
+            loads: #('Topez-Server-24x-DebugTools');
+            repository: 'github://dalehenrich/tode:dev/repository' ] ].
+  spec
+    for: #'gs3.x'
+    do: [ 
+      spec
+        baseline: 'Tode'
+        with: [ 
+          spec
+            loads: #('Topez-Server-3x-DebugTools');
+            repository: 'github://dalehenrich/tode:dev/repository' ] ].
+  spec
+    for: #'gemstone'
+    do: [ 
 
 		spec
 			baseline: 'Tode'
